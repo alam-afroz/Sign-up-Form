@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Archivo", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        font-variation-settings: "wdth" 100;
+        margin: 0;
+        padding: 0;
+      }
+      img {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        position: relative;
+      }
+      h3 {
+        position: absolute;
+        top: 15vh;
+        left: 48.5vw;
+      }
+      form {
+        position: absolute;
+        top: 22.5vh;
+        left: 35vw;
+        width: 30vw;
+        height: 45vh;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0px 0px 10px rgb(67, 67, 67);
+        padding: 8px;
+      }
+      p {
+        display: flex;
+        flex-direction: column;
+        margin: 12px;
+      }
+      button[type="submit"] {
+        position: relative;
+        top: 3vh;
+        left: 7vw;
+        margin-top: 3vh;
+        margin-left: 4vh;
+        align-self: flex-start;
+        appearance: none;
+        height: 40px;
+        width: 12vw;
+        border-width: 0px;
+        border-radius: 8px;
+        background-color: rgb(131, 113, 194);
+        color: white;
+        font-weight: bold;
+        font-size: 1rem;
+      }
+      button[type="submit"]:hover {
+        box-shadow: 0px 0px 10px rgb(131, 113, 194);
+        border: 2px solid rgb(109, 68, 255);
+        color: rgb(131, 113, 194);
+        background-color: white;
+      }
+      input {
+        appearance: none;
+        padding-left: 4px;
+        border: 1.6px solid #e5e7eb;
+        font-size: 16px;
+        height: 5vh;
+        border-radius: 4px;
+      }
+      input[type="password"]:invalid {
+        border-color: rgb(255, 122, 122);
+      }
+      input:focus {
+        outline: 0px;
+        border-width: 1.6px;
+        border-color: #0055ff;
+        font-size: 16px;
+        box-shadow: 0px 1px 1.6px black;
+      }
+      span {
+        position: absolute;
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+        bottom: 25vh;
+        left: 42vw;
+      }
+      a {
+        text-decoration: none;
+        color: pink;
+      }
+      a:hover {
+        text-decoration: underline;
+        color: rgba(0, 0, 0, 0.503);
+      }
+    </style>
+  </head>
+  <body>
+    <img src="images/bgImage.jpg" alt="#" />
+    <h3>Login</h3>
+    <form>
+      <p>
+        <label for="username">Username</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          maxlength="20"
+          placeholder="upto 20 character"
+        />
+      </p>
+      <p>
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="eg: abc@example.com"
+          required
+        />
+      </p>
+      <p>
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          required
+          pattern="[A-Z a-z 0-9]{6,12}"
+          minlength="6"
+          maxlength="12"
+          placeholder="6-12 character [A-Z a-z 0-9]"
+        />
+      </p>
+      <button type="submit">Login</button>
+    </form>
+    <span>Don't have a account? <a href="index.html">Sign up</a></span>
+  </body>
+</html>
